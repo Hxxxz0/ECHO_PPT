@@ -1,0 +1,7 @@
+node_modules/
+dist/
+.slidev/
+*.log
+
+# Large binary assets — host separately or use Git LFS
+public/videos/

@@ -7,7 +7,7 @@ on:
 
 permissions:
   contents: read
-  pages:   write
+  pages: write
   id-token: write
 
 concurrency:
@@ -27,13 +27,9 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 20
-          cache: pnpm
 
       - name: Install dependencies
-        run: pnpm install
-
-      - name: Install esbuild (required by slidev)
-        run: pnpm approve-builds --filter @esbuild/linux-x64 || true && pnpm rebuild esbuild || true
+        run: pnpm install --no-frozen-lockfile
 
       - name: Build slides
         run: pnpm exec slidev build --base /ECHO_PPT/

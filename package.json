@@ -25,6 +25,7 @@
         "playwright-chromium": "^1.52.0"
     },
     "dependencies": {
-        "@slidev/theme-default": "^0.25.0"
+        "@slidev/theme-default": "^0.25.0",
+        "seedrandom": "^3.0.5"
     }
 }
